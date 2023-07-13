@@ -24,7 +24,7 @@ const ReportForm = () => {
 
   const checkAuthentication = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/login");
+      const response = await axios.get("https://cg-api.onrender.com/api/login");
       setIsAuthenticated(response.data.isAuthenticated);
     } catch (error) {
       console.error("Error checking authentication:", error);
@@ -37,7 +37,7 @@ const ReportForm = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/reports",
+        "https://cg-api.onrender.com/api/reports",
         formData
       );
       console.log(response.data); // Report submitted successfully
@@ -57,7 +57,7 @@ const ReportForm = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/api/logout");
+      const response = await axios.post("https://cg-api.onrender.com/api/logout");
       console.log(response.data); // Logout successful
       // Handle success, e.g., redirect to a success page or show a success message
       history.push("/"); // Redirect to the home page after logout

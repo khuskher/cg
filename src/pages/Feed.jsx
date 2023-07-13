@@ -64,7 +64,7 @@ function Feed() {
   useEffect(() => {
     // Fetch reports from the backend
     axios
-      .get("http://localhost:5000/api/feed")
+      .get("https://cg-api.onrender.com/api/feed")
       .then((response) => {
         setReports(response.data);
       })

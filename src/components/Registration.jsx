@@ -20,7 +20,7 @@ const RegisterForm = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/register", {
+      const response = await axios.post("https://cg-api.onrender.com/api/register", {
         username,
         email,
         password,
