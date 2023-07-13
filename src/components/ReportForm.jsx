@@ -28,7 +28,7 @@ const ReportForm = () => {
       setIsAuthenticated(response.data.isAuthenticated);
     } catch (error) {
       console.error("Error checking authentication:", error);
-      history.push("/login"); // Redirect to login page on error
+      // history.push("/login"); // Redirect to login page on error
     }
   };
 
